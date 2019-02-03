@@ -1,10 +1,35 @@
 /* custom styles */
 
+.hero {
+    background: url(../img/hero_bg640.jpeg) no-repeat bottom right;
+}
+
 .has-image-centered {
     margin-left: auto;
     margin-right: auto;
 }
 
+
 .padding-left-1 {
     padding-left: 1rem;
+}
+
+.title span,
+.subtitle span {
+    padding: 0 10px;
+}
+
+.hero .subtitle {
+    margin-left: 10px;
+}
+
+
+nav {
+  transition: all 0.5s ease-in-out;
+}
+
+.navOnScroll,
+.navOnScroll .container,
+.navOnScroll .navbar-brand {
+    min-height: 2.75rem;
 }

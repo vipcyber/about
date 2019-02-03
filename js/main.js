@@ -1,3 +1,5 @@
+// custom js
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
@@ -20,6 +22,55 @@ document.addEventListener('DOMContentLoaded', () => {
   
         });
       });
+    };
+
+});
+
+
+Vue.component('modal', {
+	template: `
+	<div class="modal is-active">
+	  <div class="modal-background" @click="$emit('close')"></div>
+	  <div class="modal-card">
+	    <header class="modal-card-head">
+	      <p class="modal-card-title">
+	      	<slot name="header"></slot>
+	      </p>
+	      <button class="modal-close is-large" aria-label="close" @click="$emit('close')"></button>
+	    </header>
+	    <section class="modal-card-body">
+	      <slot>Default slot area</slot>
+	    </section>
+	    <footer class="modal-card-foot">
+	    	<slot name="footer">
+	    		<button class="button is-success">Save changes</button>
+	    	</slot>
+	    </footer>
+	  </div>
+	</div>
+	`,
+})
+
+
+var app = new Vue({
+	el: '#root',
+	data: {
+		showModal: false,
+		message: 'Lorem',
+		scrolled: false
+	},
+	methods: {
+		toggleClass() {
+			this.isScroll = true
+		},
+		handleScroll () {
+      this.scrolled = window.scrollY > 0
     }
-  
-  });
+	},
+	created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll')
+  }
+});
