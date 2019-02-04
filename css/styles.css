@@ -23,6 +23,9 @@
     margin-left: 10px;
 }
 
+.padding-tb-2 {
+    padding: 2rem 0;
+}
 
 nav {
   transition: all 0.5s ease-in-out;
