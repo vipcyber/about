@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>about</title>
+		<title>About</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	    <meta name="description" content="Demo project">
@@ -9,19 +9,20 @@
 		<link rel="stylesheet" href="css/bulma.min.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/font-awesome-all.css">
-		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
 		<style type="text/css"></style>
 	</head>
 	<body class="has-navbar-fixed-top">
 
-		<nav class="navbar is-fixed-top is-white role="navigation" aria-label="main navigation"">
+		<div id="root">
+
+		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" :class="{'is-light': !scrolled, 'has-background-grey-lighter navOnScroll': scrolled}">
 			<div class="container">
 				<div class="navbar-brand">
 					<a class="navbar-item">
-						<span class="icon has-text-grey-darker">
+						<span id="logo" class="icon has-text-grey-darker">
 							<i class="fab fa-github-alt fa-2x"></i>
 						</span>
-						<span class="has-text-grey-dark padding-left-1">vipcyber</span>
+						<span id="logo-word" class="has-text-grey-dark padding-left-1">vipcyber</span>
 					</a>
 					<a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
 						<span aria-hidden="true"></span>
@@ -45,94 +46,95 @@
 			</div>
 		</nav>
 
-		<section class="hero is-warning is-medium">
-			<!-- Hero head: will stick at the top -->
-			<div class="hero-head">
-				<div class="container has-text-centered">
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, hic aliquam! Deserunt labore quasi dignissimos reprehenderit nam tempore repellendus corporis quas hic magni, optio nisi mollitia doloremque natus, recusandae debitis.</p>
-				</div>
-			</div>
-		
-			<!-- Hero content: will be in the middle -->
+		<section class="hero is-light is-medium">		
 			<div class="hero-body">
-				<div class="container has-text-centered">
-					<figure class="image is-128x128 container">
-						<img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-					</figure>
-					<h1 class="title is-1">
-						VLADIMIR MAKAROV
+				<div class="container">
+					<h1 class="title is-1 has-text-weight-bold">
+						<span class="has-background-light">VLADIMIR MAKAROV</span>
 					</h1>
-					<h2 class="subtitle">
-						Web Developer
+					<h2 class="subtitle is-3 has-text-weight-light">
+						<span class="has-background-danger has-text-white">Frontend Developer</span>
+						
 					</h2>
 				</div>
 			</div>
-		
-			<!-- Hero footer: will stick at the bottom -->
 			<div class="hero-foot">
 				<nav class="tabs">
 					<div class="container">
 						<ul>
-							<li class="is-active"><a>Overview</a></li>
-							<li><a>Modifiers</a></li>
-							<li><a>Grid</a></li>
-							<li><a>Elements</a></li>
-							<li><a>Components</a></li>
-							<li><a>Layout</a></li>
+							<li class="is-active"><a>Item 1</a></li>
+							<li><a>Item 2</a></li>
+							<li><a>Item 3</a></li>
+							<li><a>Item 4</a></li>
+							<li><a>Item 5</a></li>
+							<li><a>Item 6</a></li>
 						</ul>
 					</div>
 				</nav>
 			</div>
 		</section>
 
+		<section class="section about">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-5">
+							<article class="message is-info">
+								<div class="message-body">
+									<h1 class="title">About me</h1>
+									<h4 class="subtitle">Hello, I'm a professional web developer</h4>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+								</div>
+							</article>
+					</div>
+					<div class="column is-7">
+						<div class="columns has-text-centered	">
+							<div class="column is-4">
+								<span class="icon">
+									<i class="fab fa-linux fa-3x"></i>
+								</span>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero recusandae quod rerum delectus, ex vitae enim quibusdam veniam modi? Libero nihil officia quibusdam, quis tenetur amet consequuntur ducimus qui. Accusamus!</p>
+							</div>
+							<div class="column is-4">
+								<span class="icon">
+									<i class="fas fa-award fa-3x"></i>
+								</span>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi cumque aliquid expedita laborum laudantium, excepturi ex quasi vitae, dolor doloremque minus quae modi accusantium quibusdam vel culpa voluptatum a.</p>
+							</div>
+							<div class="column is-4">
+								<span class="icon">
+									<i class="fas fa-battery-full fa-3x"></i>
+								</span>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet explicabo ducimus eius enim eos itaque voluptatem a id inventore? Temporibus aliquam dolore repudiandae natus perferendis sed illo consequatur, explicabo totam.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</section>
+
 		<section class="section is-medium">
 		    <div class="container">
-		      <h1 class="title">
-		        Let the game begin!
-		      </h1>
-		      <p class="subtitle">
-		        My first website with <strong>Bulma</strong>!
-			  </p>
-			  <!-- card -->
-			  <div class="card">
-				<div class="card-content">
-					<p class="title">
-					“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
-					</p>
-					<p class="subtitle">
-					Jeff Atwood
-					</p>
-				</div>
-				<footer class="card-footer">
-					<p class="card-footer-item">
-					<span>
-						View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-					</span>
-					</p>
-					<p class="card-footer-item">
-					<span>
-						Share on <a href="#">Facebook</a>
-					</span>
-					</p>
-				</footer>
-			</div>
+				<input type="text" v-model="message">
+				<p>The value of input is: {{ message }}</p>
+				<button class="button is-danger is-outlined" @click="showModal = true">Show modal</button>
+				<button class="button is-info" @click="toggleClass">Toggle class</button> 
+			
+				<modal v-show="showModal" @close="showModal = false">
+					<template slot="header">Some header here</template>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti vero facere explicabo nesciunt placeat dolores animi beatae sit temporibus vel, illum esse veritatis qui, eaque eum, ab facilis quaerat soluta?
+					<template slot="footer">
+						<button class="button is-success">Save changes</button>
+						<button class="button" @click="showModal = false">Cancel</button>
+					</template>
+				</modal>
+
 		    </div>
 		</section>
 
-		<section class="section">
-			<div class="container">
-				<h1 class="title">Section</h1>
-				<h2 class="subtitle">
-					A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-				</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus voluptatum quos quia sit dolor beatae? Perferendis fugiat, nobis cumque ducimus nisi dolores blanditiis quidem dicta dolore nesciunt illum consequuntur?</p>
-			</div>
-		</section>
 
 		
 		<div class="section">
 			<div class="container">
-
 
 			<div class="tile is-ancestor">
 					<div class="tile is-vertical is-8">
@@ -192,8 +194,10 @@
 				</p>
 			</div>
 		</footer>
+	</div>	<!-- end root -->
 
-		<!-- JS block -->
+		<!-- JS -->
+		<script src="js/vue.js"></script> 
 		<script src="js/main.js"></script>
 	</body>
 </html>
