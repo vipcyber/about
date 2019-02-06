@@ -49,7 +49,41 @@ Vue.component('modal', {
 	  </div>
 	</div>
 	`,
-})
+});
+
+Vue.component('card', {
+	props: ['text', 'footer'],
+	template:	`
+	<div class="card">
+		<div class="card-content">
+			<div class="content">
+				{{ text }}
+			</div>
+		</div>
+		<footer class="card-footer">
+			<p class="card-footer-item">
+				<span>
+					{{ footer }}
+				</span>
+			</p>
+		</footer>
+	</div>
+	`
+});
+
+Vue.component('message',{
+	props: ['addstyle', 'title', 'text'],
+	template: `
+	<article class="message" :class="addstyle">
+		<div class="message-header">
+			<p>{{ title }}</p>
+		</div>
+		<div class="message-body">
+			{{ text }}
+		</div>
+	</article>
+	`
+});
 
 
 var app = new Vue({
