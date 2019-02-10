@@ -36,3 +36,7 @@ nav {
 .navOnScroll .navbar-brand {
     min-height: 2.75rem;
 }
+
+.rounded-20 {
+    border-radius: 20px;
+}
